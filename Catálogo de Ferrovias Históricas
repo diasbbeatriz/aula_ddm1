@@ -1,0 +1,114 @@
+import React from 'react';
+import { View, Text, Image } from 'react-native';
+
+export default function App() {
+  return (
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: '#EFE1C5',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingVertical: 45,
+      }}
+    >
+      <View
+        style={{
+          flex: 1,
+          width: '100%',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <Text
+          style={{
+            fontSize: 15,
+            color: '#8B5E34',
+            fontWeight: 'bold',
+            marginBottom: 50,
+          }}
+        >
+          CATÁLOGO HISTÓRICO
+        </Text>
+
+        <Image
+          source={{
+            uri: 'https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL2dldHR5aW1hZ2VzLTEzNDU0Nzg3MC5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgyOH19fQ==',
+          }}
+          style={{
+            width: 180,
+            height: 180,
+            borderRadius: 90,
+          }}
+        />
+
+        <Text
+          style={{
+            fontSize: 40,
+            fontWeight: 'bold',
+            color: '#3B2415',
+          }}
+        >
+          Ferrovias
+        </Text>
+
+        <View
+          style={{
+            width: 80,
+            height: 3,
+            backgroundColor: '#B8863B',
+            marginVertical: 10,
+          }}
+        />
+
+        <Text
+          style={{
+            fontSize: 18,
+            color: '#65452F',
+            textAlign: 'center',
+          }}
+        >
+          Uma viagem pela história sobre trilhos
+        </Text>
+
+        <Text
+          style={{
+            fontSize: 14,
+            fontStyle: 'italic',
+            color: '#8B7355',
+            textAlign: 'center',
+            marginTop: 20,
+          }}
+        >
+          “Conheça as ferrovias que marcaram gerações.”
+        </Text>
+      </View>
+
+      <View
+        style={{
+          alignItems: 'center',
+        }}
+      >
+        <Text
+          style={{
+            fontSize: 13,
+            color: '#8B5E34',
+            marginBottom: 4,
+          }}
+        >
+          v1.0
+        </Text>
+
+        <Text
+          style={{
+            fontSize: 15,
+            fontWeight: 'bold',
+            color: '#3B2415',
+          }}
+        >
+          Ana Beatriz
+        </Text>
+      </View>
+    </View>
+  );
+}
