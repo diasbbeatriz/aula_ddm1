@@ -1,0 +1,213 @@
+import React from 'react';
+import { View, Text, TextInput, Button, Pressable, Image } from 'react-native';
+
+export default function App() {
+  return (
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: '#EFE1C5',
+        padding: 25,
+      }}
+    >
+
+      <View style={{ alignItems: 'center', marginTop: 30 }}>
+
+        <Image
+          source={{
+            uri: 'https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL2dldHR5aW1hZ2VzLTEzNDU0Nzg3MC5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgyOH19fQ==',
+          }}
+          style={{
+            width: 90,
+            height: 90,
+            borderRadius: 45,
+            marginBottom: 15,
+          }}
+        />
+
+        <Text
+          style={{
+            fontSize: 30,
+            fontWeight: 'bold',
+            color: '#3B2415',
+          }}
+        >
+          Ferrovias
+        </Text>
+
+        <Text
+          style={{
+            fontSize: 24,
+            fontWeight: 'bold',
+            color: '#65452F',
+            marginTop: 30,
+          }}
+        >
+          Login
+        </Text>
+
+      </View>
+
+      <Text
+        style={{
+          color: '#65452F',
+          marginTop: 20,
+        }}
+      >
+        E-mail
+      </Text>
+
+      <TextInput
+        placeholder="seu e-mail"
+        style={{
+          borderWidth: 1,
+          borderColor: '#8B5E34',
+          borderRadius: 5,
+          marginTop: 5,
+          marginBottom: 15,
+          padding: 10,
+          backgroundColor: '#F8F0DE',
+        }}
+      />
+
+      <Text style={{ color: '#65452F' }}>
+        Senha
+      </Text>
+
+      <TextInput
+        placeholder="sua senha"
+        secureTextEntry={true}
+        style={{
+          borderWidth: 1,
+          borderColor: '#8B5E34',
+          borderRadius: 5,
+          marginTop: 5,
+          marginBottom: 15,
+          padding: 10,
+          backgroundColor: '#F8F0DE',
+        }}
+      />
+
+      <Button
+        title="Entrar"
+        color="#8B5E34"
+        onPress={() => alert('Login realizado!')}
+      />
+
+      <Pressable
+        onPress={() => alert('Esqueci a senha')}
+      >
+        <Text
+          style={{
+            color: '#8B5E34',
+            textAlign: 'center',
+            marginTop: 15,
+          }}
+        >
+          Esqueci a senha
+        </Text>
+      </Pressable>
+
+      <Pressable
+        onPress={() => alert('Criar conta')}
+      >
+        <Text
+          style={{
+            color: '#8B5E34',
+            textAlign: 'center',
+            marginTop: 10,
+          }}
+        >
+          Criar conta
+        </Text>
+      </Pressable>
+
+
+      <View
+        style={{
+          height: 3,
+          backgroundColor: '#B8863B',
+          marginVertical: 25,
+        }}
+      />
+
+      <View style={{ alignItems: 'center' }}>
+
+        <Text
+          style={{
+            fontSize: 24,
+            fontWeight: 'bold',
+            color: '#65452F',
+          }}
+        >
+          Cadastro
+        </Text>
+
+      </View>
+
+      <Text
+        style={{
+          color: '#65452F',
+          marginTop: 15,
+        }}
+      >
+        Nome
+      </Text>
+
+      <TextInput
+        placeholder="seu nome"
+        style={{
+          borderWidth: 1,
+          borderColor: '#8B5E34',
+          borderRadius: 5,
+          marginTop: 5,
+          marginBottom: 15,
+          padding: 10,
+          backgroundColor: '#F8F0DE',
+        }}
+      />
+
+      <Text style={{ color: '#65452F' }}>
+        E-mail
+      </Text>
+
+      <TextInput
+        placeholder="seu e-mail"
+        style={{
+          borderWidth: 1,
+          borderColor: '#8B5E34',
+          borderRadius: 5,
+          marginTop: 5,
+          marginBottom: 15,
+          padding: 10,
+          backgroundColor: '#F8F0DE',
+        }}
+      />
+
+      <Text style={{ color: '#65452F' }}>
+        Senha
+      </Text>
+
+      <TextInput
+        placeholder="sua senha"
+        secureTextEntry={true}
+        style={{
+          borderWidth: 1,
+          borderColor: '#8B5E34',
+          borderRadius: 5,
+          marginTop: 5,
+          marginBottom: 15,
+          padding: 10,
+          backgroundColor: '#F8F0DE',
+        }}
+      />
+
+      <Button
+        title="Cadastrar"
+        color="#8B5E34"
+        onPress={() => alert('Cadastro realizado!')}
+      />
+
+    </View>
+  );
+}
