@@ -1,0 +1,166 @@
+import { Text, View,ScrollView, TextInput,Pressable, Image } from 'react-native';
+import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
+import { StatusBar } from 'expo-status-bar';
+
+export default function App() {
+  return (
+    <SafeAreaProvider style={{ flex: 1, backgroundColor: '#EFE1C5' }}>
+
+      <SafeAreaView style={{ flex: 1 }}>
+
+        <StatusBar style="dark" />
+
+        <View
+          style={{
+            backgroundColor: '#3B2415',
+            padding: 20,
+            alignItems: 'center'
+          }}
+        >
+          <Text
+            style={{
+              color: '#EFE1C5',
+              fontSize: 26,
+              fontWeight: 'bold'
+            }}
+          >
+            Ferrovias
+          </Text>
+
+          <Text
+            style={{
+              color: '#D6B875',
+              marginTop: 5
+            }}
+          >
+            Catálogo Histórico
+          </Text>
+        </View>
+
+        <ScrollView style={{ padding: 20 }}>
+
+          <Text
+            style={{
+              fontSize: 24,
+              fontWeight: 'bold',
+              color: '#3B2415',
+              marginBottom: 15
+            }}
+          >
+            Explore as ferrovias
+          </Text>
+
+          <TextInput
+            placeholder="Pesquisar uma ferrovia"
+            style={{
+              borderWidth: 1,
+              borderColor: '#8B5E34',
+              borderRadius: 5,
+              padding: 10,
+              backgroundColor: '#F8F0DE',
+              marginBottom: 20
+            }}
+          />
+
+          <Image
+            source={{
+              uri: 'https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL2dldHR5aW1hZ2VzLTEzNDU0Nzg3MC5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgyOH19fQ=='
+            }}
+            style={{
+              width: '100%',
+              height: 180,
+              borderRadius: 10,
+              marginBottom: 20
+            }}
+          />
+
+          <Text
+            style={{
+              fontSize: 20,
+              fontWeight: 'bold',
+              color: '#65452F',
+              marginBottom: 10
+            }}
+          >
+            Conheça a história
+          </Text>
+
+          <Text
+            style={{
+              fontSize: 15,
+              color: '#65452F',
+              lineHeight: 22,
+              marginBottom: 20
+            }}
+          >
+            Descubra ferrovias históricas, locomotivas
+            e momentos importantes da história dos
+            transportes sobre trilhos.
+          </Text>
+
+          <Pressable
+            onPress={() => alert('Catálogo selecionado!')}
+            style={{
+              backgroundColor: '#8B5E34',
+              padding: 15,
+              borderRadius: 5,
+              alignItems: 'center',
+              marginBottom: 20
+            }}
+          >
+            <Text
+              style={{
+                color: 'white',
+                fontWeight: 'bold'
+              }}
+            >
+              Ver catálogo
+            </Text>
+          </Pressable>
+
+          <View
+            style={{
+              backgroundColor: '#F8F0DE',
+              padding: 15,
+              borderRadius: 5,
+              borderWidth: 1,
+              borderColor: '#B8863B',
+              marginBottom: 30
+            }}
+          >
+            <Text
+              style={{
+                fontSize: 18,
+                fontWeight: 'bold',
+                color: '#3B2415',
+                marginBottom: 8
+              }}
+            >
+              Você sabia?
+            </Text>
+
+            <Text style={{ color: '#65452F' }}>
+              As ferrovias foram importantes para conectar
+              diferentes regiões e transformar o transporte.
+            </Text>
+          </View>
+
+        </ScrollView>
+
+        <View
+          style={{
+            backgroundColor: '#3B2415',
+            padding: 10,
+            alignItems: 'center'
+          }}
+        >
+          <Text style={{ color: '#EFE1C5' }}>
+            Ferrovias • Catálogo Histórico
+          </Text>
+        </View>
+
+      </SafeAreaView>
+
+    </SafeAreaProvider>
+  );
+}
