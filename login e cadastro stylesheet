@@ -1,0 +1,193 @@
+import React from 'react';
+import {
+  View,
+  Text,
+  TextInput,
+  Button,
+  Pressable,
+  Image,
+  StyleSheet,
+} from 'react-native';
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+
+      <View style={styles.logoContainer}>
+
+        <Image
+          source={{
+            uri: 'https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL2dldHR5aW1hZ2VzLTEzNDU0Nzg3MC5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgyOH19fQ=='
+          }}
+          style={styles.logo}
+        />
+
+        <Text style={styles.logoNome}>
+          Ferrovias
+        </Text>
+
+      </View>
+
+      <Text style={styles.titulo}>
+        Login
+      </Text>
+
+      <Text style={styles.label}>
+        E-mail
+      </Text>
+
+      <TextInput
+        placeholder="seu e-mail"
+        keyboardType="email-address"
+        style={styles.input}
+      />
+
+      <Text style={styles.label}>
+        Senha
+      </Text>
+
+      <TextInput
+        placeholder="sua senha"
+        secureTextEntry={true}
+        style={styles.input}
+      />
+
+      <Button
+        title="Entrar"
+        color="#8B5E34"
+        onPress={() => alert('Login realizado!')}
+      />
+
+      <Pressable
+        onPress={() => alert('Esqueci a senha')}
+      >
+        <Text style={styles.link}>
+          Esqueci a senha
+        </Text>
+      </Pressable>
+
+      <Pressable
+        onPress={() => alert('Criar conta')}
+      >
+        <Text style={styles.link}>
+          Criar conta
+        </Text>
+      </Pressable>
+
+
+      <View style={styles.divisao} />
+
+      <Text style={styles.cadastro}>
+        Cadastro
+      </Text>
+
+      <Text style={styles.label}>
+        Nome
+      </Text>
+
+      <TextInput
+        placeholder="seu nome"
+        style={styles.input}
+      />
+
+      <Text style={styles.label}>
+        E-mail
+      </Text>
+
+      <TextInput
+        placeholder="seu e-mail"
+        keyboardType="email-address"
+        style={styles.input}
+      />
+
+      <Text style={styles.label}>
+        Senha
+      </Text>
+
+      <TextInput
+        placeholder="sua senha"
+        secureTextEntry={true}
+        style={styles.input}
+      />
+
+      <Button
+        title="Cadastrar"
+        color="#8B5E34"
+        onPress={() => alert('Cadastro realizado!')}
+      />
+
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+
+  container: {
+    flex: 1,
+    backgroundColor: '#EFE1C5',
+    padding: 25,
+    paddingTop: 45,
+  },
+
+  logoContainer: {
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+
+  logo: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+  },
+
+  logoNome: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    color: '#3B2415',
+    marginTop: 8,
+  },
+
+  titulo: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#65452F',
+    textAlign: 'center',
+    marginBottom: 15,
+  },
+
+  cadastro: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#65452F',
+    textAlign: 'center',
+    marginBottom: 15,
+  },
+
+  label: {
+    color: '#65452F',
+    marginTop: 10,
+    marginBottom: 5,
+  },
+
+  input: {
+    borderWidth: 1,
+    borderColor: '#8B5E34',
+    borderRadius: 5,
+    padding: 10,
+    backgroundColor: '#F8F0DE',
+    marginBottom: 10,
+  },
+
+  link: {
+    color: '#8B5E34',
+    textAlign: 'center',
+    marginTop: 15,
+  },
+
+  divisao: {
+    height: 3,
+    backgroundColor: '#B8863B',
+    marginVertical: 20,
+  },
+
+});
