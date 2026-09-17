@@ -1,0 +1,119 @@
+import React from 'react';
+import { View, Text, Image, StyleSheet } from 'react-native';
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+
+      <View style={styles.conteudo}>
+
+        <Text style={styles.catalogo}>
+          CATÁLOGO HISTÓRICO
+        </Text>
+
+        <Image
+          source={{
+            uri: 'https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL2dldHR5aW1hZ2VzLTEzNDU0Nzg3MC5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgyOH19fQ=='
+          }}
+          style={styles.imagem}
+        />
+
+        <Text style={styles.titulo}>
+          Ferrovias
+        </Text>
+
+        <View style={styles.linha} />
+
+        <Text style={styles.subtitulo}>
+          Uma viagem pela história sobre trilhos
+        </Text>
+
+        <Text style={styles.frase}>
+          “Conheça as ferrovias que marcaram gerações.”
+        </Text>
+
+      </View>
+
+      <View style={styles.rodape}>
+        <Text style={styles.versao}>v1.0</Text>
+        <Text style={styles.nome}>Ana Beatriz</Text>
+      </View>
+
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+
+  container: {
+    flex: 1,
+    backgroundColor: '#EFE1C5',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingVertical: 45,
+  },
+
+  conteudo: {
+    flex: 1,
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  catalogo: {
+    fontSize: 15,
+    color: '#8B5E34',
+    fontWeight: 'bold',
+    marginBottom: 50,
+  },
+
+  imagem: {
+    width: 180,
+    height: 180,
+    borderRadius: 90,
+  },
+
+  titulo: {
+    fontSize: 40,
+    fontWeight: 'bold',
+    color: '#3B2415',
+  },
+
+  linha: {
+    width: 80,
+    height: 3,
+    backgroundColor: '#B8863B',
+    marginVertical: 10,
+  },
+
+  subtitulo: {
+    fontSize: 18,
+    color: '#65452F',
+    textAlign: 'center',
+  },
+
+  frase: {
+    fontSize: 14,
+    fontStyle: 'italic',
+    color: '#8B7355',
+    textAlign: 'center',
+    marginTop: 20,
+  },
+
+  rodape: {
+    alignItems: 'center',
+  },
+
+  versao: {
+    fontSize: 13,
+    color: '#8B5E34',
+    marginBottom: 4,
+  },
+
+  nome: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    color: '#3B2415',
+  },
+
+});
