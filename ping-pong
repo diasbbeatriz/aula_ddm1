@@ -1,0 +1,127 @@
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';
+
+export default function App() {
+  const [jogador1, setJogador1] = useState(0);
+  const [jogador2, setJogador2] = useState(0);
+
+  function mais1() {
+    if (jogador1 < 11 && jogador2 < 11) {
+      setJogador1(jogador1 + 1);
+    }
+  }
+
+  function menos1() {
+    if (jogador1 > 0) {
+      setJogador1(jogador1 - 1);
+    }
+  }
+
+  function mais2() {
+    if (jogador1 < 11 && jogador2 < 11) {
+      setJogador2(jogador2 + 1);
+    }
+  }
+
+  function menos2() {
+    if (jogador2 > 0) {
+      setJogador2(jogador2 - 1);
+    }
+  }
+
+  function reiniciar() {
+    setJogador1(0);
+    setJogador2(0);
+  }
+
+  return (
+    <View style={styles.container}>
+
+      <Text style={styles.titulo}>PING-PONG</Text>
+      <Text>Primeiro a chegar em 11 pontos</Text>
+
+      <View style={styles.placar}>
+
+        <View style={styles.jogador}>
+          <Text>Jogador 1</Text>
+          <Text style={styles.pontos}>{jogador1}</Text>
+
+          <Button title="- 1" onPress={menos1} />
+          <Button title="+ 1" onPress={mais1} />
+        </View>
+
+        <Text style={styles.x}>X</Text>
+
+        <View style={styles.jogador}>
+          <Text>Jogador 2</Text>
+          <Text style={styles.pontos}>{jogador2}</Text>
+
+          <Button title="- 1" onPress={menos2} />
+          <Button title="+ 1" onPress={mais2} />
+        </View>
+
+      </View>
+
+      {jogador1 === 11 && (
+        <Text style={styles.vitoria}> Jogador 1 venceu!</Text>
+      )}
+
+      {jogador2 === 11 && (
+        <Text style={styles.vitoria}> Jogador 2 venceu!</Text>
+      )}
+
+      <View style={styles.reiniciar}>
+        <Button title="Reiniciar" onPress={reiniciar} />
+      </View>
+
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#EAF4F8',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  titulo: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    marginBottom: 5,
+  },
+
+  placar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 40,
+  },
+
+  jogador: {
+    alignItems: 'center',
+    width: 120,
+    gap: 8,
+  },
+
+  pontos: {
+    fontSize: 60,
+    fontWeight: 'bold',
+  },
+
+  x: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    marginHorizontal: 15,
+  },
+
+  vitoria: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginTop: 30,
+  },
+
+  reiniciar: {
+    marginTop: 25,
+  },
+});
